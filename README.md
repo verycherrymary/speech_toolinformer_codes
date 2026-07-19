@@ -72,7 +72,7 @@ pip install -r requirements.txt
 
 Настройте токен Hugging Face:
 
-В файле app_microphone.py замените HF_TOKEN = "hf_токен" на ваш токен.
+В файле app_all.py замените HF_TOKEN = "hf_token" на ваш токен.
 
 Зарегистрируйтесь на huggingface.co
 
@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 bash
 
-streamlit run app_microphone.py
+streamlit run app_all.py
 
 
 🎯 **Использование**
@@ -113,7 +113,7 @@ json { "product": "гайки стальные диаметром 10 мм", "hs_
 
 📊 **Расширенное использование (поиск по Excel)**
 
-Для более точного определения кода ТНВЭД можно добавить поиск по базе Excel. В проекте (в ноутбуке) реализован инструмент SmartSearchTool с:
+Для более точного определения кода ТНВЭД добавлен поиск по базе данных (файл excel). В проекте реализован инструмент SmartSearchTool с:
 
 Стеммингом (приведение слов к основе)
 
@@ -125,7 +125,7 @@ json { "product": "гайки стальные диаметром 10 мм", "hs_
 
 python
 
-searcher = SmartSearchTool('data/hs_codes.xlsx') results = searcher.search("гайка стальная")
+searcher = SmartSearchTool('ссылка на мой гугл диск') results = searcher.search("гайка стальная")
 
 [{'product_name': 'ГАЙКА СТАЛЬНАЯ', 'hs_code': '7318163009', 'score': 99}]
 
